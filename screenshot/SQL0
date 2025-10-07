@@ -1,0 +1,28 @@
+Name: Ukwizagira Jean Bosco  
+Student ID: 27625  
+Course: PL/SQL Auca  
+Instructor: (Add your instructor’s name)
+
+
+This assignment includes the following tasks: the creation, deletion, and management of Pluggable Databases (PDBs) in Oracle 21c, as well as the configuration of Oracle Enterprise Manager (OEM)  
+The project is divided into three tasks:
+
+1. Task:  Create a new PDB (`plsql_class2025db`)  
+2. Task: Create and delete another PDB (`bo_to_delete_pdb_27625`)  
+3. Ask  Configure Oracle Enterprise Manager (OEM) and capture the dashboard
+
+
+
+Create a new PDB to store all PL/SQL coursework.
+
+SQL Commands Used
+
+ALTER SESSION SET CONTAINER = CDB$ROOT;
+
+CREATE PLUGGABLE DATABASE plsql_class2025db
+  ADMIN USER jean_plsqlauca_27625 IDENTIFIED BY Ukwizagira
+  FILE_NAME_CONVERT = ('pdbseed', 'plsql_class2025');
+
+  SQL> CREATE PLUGGABLE DATABASE bo_to_delete_pdb_27625
+  2    ADMIN USER bosco_plsqlauca_27625 IDENTIFIED BY Bosco123
+  3    FILE_NAME_CONVERT = ('pdbseed', 'bo_to_delete_pdb_27625');
